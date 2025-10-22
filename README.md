@@ -90,13 +90,11 @@ A **instância EC2** pode ser utilizada para visualizar estatísticas ou consoli
 ---
 
 ```
-
 > “Dito por si: como posso adicionar um EC2 nesse diagrama?”  
 > — Aqui está o resultado final dessa integração, com um fluxo mais completo e realista, unindo computação serverless, IA e automação em nuvem.
-
 ```
 
-##👨‍💻 Autor
+👨‍💻 Autor
 **Matheus Sampaio**  
 💻 Desenvolvedor | ☁️ Entusiasta em Cloud e Back-End  
 🔗 [LinkedIn]([https://www.linkedin.com/](https://www.linkedin.com/in/matheus-sampaio-dev/)) 
