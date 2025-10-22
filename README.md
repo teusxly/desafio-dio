@@ -41,6 +41,7 @@ A arquitetura foi desenvolvida para representar um **cenário realista e seguro*
 │   └── diagramaAWS.png
 └── 📄 .gitignore
 
+```
 
 ## 🚀 Como Reproduzir o Projeto
 
