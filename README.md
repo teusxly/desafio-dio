@@ -24,26 +24,23 @@ A arquitetura foi desenvolvida para representar um **cenário realista e seguro*
 6. 📦 Os resultados são gravados novamente no **S3** no **bucket de saída (output-bucket)**.  
 7. 📊 O usuário pode visualizar ou baixar o resultado final.
 
----
-
+```
 📁 aws-sentiment-analysis
 ├── 📄 README.md → Documentação do projeto
 ├── 📁 lambda-function → Código da função Lambda (Python/Node.js)
-│ ├── index.js / main.py
-│ ├── requirements.txt / package.json
+│   ├── index.js / main.py
+│   ├── requirements.txt / package.json
 ├── 📁 ec2 → Scripts e configurações para EC2
-│ ├── setup.sh
-│ └── dashboard.py
+│   ├── setup.sh
+│   └── dashboard.py
 ├── 📁 samples → Arquivos de exemplo para upload
-│ ├── review1.txt
-│ └── review2.txt
+│   ├── review1.txt
+│   └── review2.txt
 ├── 📁 results → Saída processada (output-bucket)
 ├── 📁 diagrams → Diagramas da arquitetura
-│ └── diagramaAWS.png
+│   └── diagramaAWS.png
 └── 📄 .gitignore
 
-
----
 
 ## 🚀 Como Reproduzir o Projeto
 
