@@ -7,12 +7,13 @@ A arquitetura foi desenvolvida para representar um **cenário realista e seguro*
 ---
 
 ## 🏗️ Arquitetura da Solução
+![Diagrama da Arquitetura]([./diagrams/diagramaAWS.png](https://github.com/user-attachments/assets/64f66454-7670-41aa-b62f-927c3ff27487))
 
-![Diagrama da Arquitetura](./diagrams/diagramaAWS.png)
 
 ### 🔁 Fluxo de Funcionamento
 
-1. 👤 O **usuário** envia um arquivo de texto (comentário, avaliação, etc.) a partir do computador.  
+1. 👤 O **usuário** envia um arquivo de texto (comentário, avaliação, etc.) a partir do computador.  ![Uploading diagramaAWS.png…]()
+
 2. ☁️ O arquivo é armazenado no **Amazon S3** no **bucket de entrada (input-bucket)**.  
 3. ⚡ Um evento de **upload no S3** aciona automaticamente uma **função AWS Lambda**.  
 4. 🧩 A **Lambda** lê o conteúdo e envia o texto para o **Amazon Comprehend** para análise de sentimentos (*Positivo*, *Negativo*, *Neutro* ou *Misto*).  
@@ -25,6 +26,75 @@ A arquitetura foi desenvolvida para representar um **cenário realista e seguro*
 
 ---
 
+📁 aws-sentiment-analysis
+├── 📄 README.md → Documentação do projeto
+├── 📁 lambda-function → Código da função Lambda (Python/Node.js)
+│ ├── index.js / main.py
+│ ├── requirements.txt / package.json
+├── 📁 ec2 → Scripts e configurações para EC2
+│ ├── setup.sh
+│ └── dashboard.py
+├── 📁 samples → Arquivos de exemplo para upload
+│ ├── review1.txt
+│ └── review2.txt
+├── 📁 results → Saída processada (output-bucket)
+├── 📁 diagrams → Diagramas da arquitetura
+│ └── diagramaAWS.png
+└── 📄 .gitignore
+
+
+---
+
+## 🚀 Como Reproduzir o Projeto
+
+### 1️⃣ Criar buckets no S3
+- `input-bucket-sentimentos`
+- `output-bucket-resultados`
+
+### 2️⃣ Criar e configurar a função Lambda
+- Linguagem: Python ou Node.js  
+- Permissões: acesso ao S3 e Comprehend  
+- Evento de gatilho: **S3 → PUT (upload)**  
+
+### 3️⃣ Configurar EC2
+- Instância: Amazon Linux ou Ubuntu  
+- Função: processar relatórios, logs ou dashboards  
+- Permissões IAM: leitura dos buckets e escrita de resultados  
+
+### 4️⃣ Testar o fluxo
+- Envie um arquivo `.txt` com frases ou comentários.  
+- Verifique o resultado processado no bucket de saída.  
+
+---
+
+## 💬 Resultados Esperados
+
+Após o upload de um arquivo no **S3**, a **Lambda** é acionada automaticamente, envia o conteúdo para o **Comprehend**, e o resultado da análise é salvo no **bucket de saída**.  
+A **instância EC2** pode ser utilizada para visualizar estatísticas ou consolidar relatórios com base nesses resultados.
+
+---
+
+## 🧠 Aprendizados
+
+- Entendimento de **event-driven architecture** (arquitetura orientada a eventos).  
+- Integração prática entre **Lambda**, **S3**, **Comprehend** e **EC2**.  
+- Aplicação de boas práticas em **segurança e escalabilidade na AWS**.  
+- Automação completa de um pipeline de **Análise de Sentimentos com IA**.
+
+---
+
+## 👨‍💻 Autor
+
+**Matheus Sampaio**  
+💻 Desenvolvedor | ☁️ Entusiasta em Cloud e Back-End  
+🔗 [LinkedIn]([https://www.linkedin.com/](https://www.linkedin.com/in/matheus-sampaio-dev/)) 
+
+---
+
+> “Dito por si: como posso adicionar um EC2 nesse diagrama?”  
+> — Aqui está o resultado final dessa integração, com um fluxo mais completo e realista, unindo computação serverless, IA e automação em nuvem.
+
+---
 ## ✅ Boas Práticas Implementadas
 
 - **Arquitetura híbrida (Serverless + EC2)** → Combina agilidade com flexibilidade de processamento.  
