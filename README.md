@@ -7,7 +7,7 @@ A arquitetura foi desenvolvida para representar um **cenário realista e seguro*
 ---
 
 ## 🏗️ Arquitetura da Solução
-![Diagrama da Arquitetura](<img width="780" height="406" alt="diagramaAWS" src="https://github.com/user-attachments/assets/b66186f3-7cb1-49c3-a9aa-6a05450e2bdf" />)
+<img width="780" height="406" alt="diagramaAWS" src="https://github.com/user-attachments/assets/ec7f8322-f082-4cb4-97f5-99adc01d145a" />
 
 
 
