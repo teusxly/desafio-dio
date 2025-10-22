@@ -7,13 +7,13 @@ A arquitetura foi desenvolvida para representar um **cenário realista e seguro*
 ---
 
 ## 🏗️ Arquitetura da Solução
-![Diagrama da Arquitetura]([./diagrams/diagramaAWS.png](https://github.com/user-attachments/assets/64f66454-7670-41aa-b62f-927c3ff27487))
+![Diagrama da Arquitetura](<img width="780" height="406" alt="diagramaAWS" src="https://github.com/user-attachments/assets/b66186f3-7cb1-49c3-a9aa-6a05450e2bdf" />)
+
 
 
 ### 🔁 Fluxo de Funcionamento
 
-1. 👤 O **usuário** envia um arquivo de texto (comentário, avaliação, etc.) a partir do computador.  ![Uploading diagramaAWS.png…]()
-
+1. 👤 O **usuário** envia um arquivo de texto (comentário, avaliação, etc.) a partir do computador.
 2. ☁️ O arquivo é armazenado no **Amazon S3** no **bucket de entrada (input-bucket)**.  
 3. ⚡ Um evento de **upload no S3** aciona automaticamente uma **função AWS Lambda**.  
 4. 🧩 A **Lambda** lê o conteúdo e envia o texto para o **Amazon Comprehend** para análise de sentimentos (*Positivo*, *Negativo*, *Neutro* ou *Misto*).  
